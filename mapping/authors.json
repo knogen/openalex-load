@@ -1,0 +1,46 @@
+{
+    "dynamic": "false",
+    "properties": {
+        "id": {
+            "type": "keyword"
+        },
+        "display_name": {
+            "type" : "keyword",
+            "normalizer": "my_normalizer",
+            "ignore_above": 128
+        },
+        "works_count": {
+            "type": "integer"
+        },
+        "cited_by_count": {
+            "type": "integer"
+        },
+        "last_known_institution":{
+            "dynamic": "false",
+            "properties": {
+                "id": {
+                    "type": "keyword" 
+                },
+                "country_code": {
+                    "type": "keyword" 
+                },
+                "openalex": {
+                    "type": "keyword",
+                    "ignore_above": 128
+                }
+            }
+        },
+        "ids": {
+            "dynamic": "false",
+            "properties": {
+                "mag": {
+                    "type": "long" 
+                },
+                "openalex": {
+                    "type": "keyword",
+                    "ignore_above": 128
+                }
+            }
+        }
+    }
+}

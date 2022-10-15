@@ -1,0 +1,19 @@
+{
+    "analysis": {
+        "normalizer": {
+          "my_normalizer": {
+            "type": "custom",
+            "filter": ["lowercase", "asciifolding"]
+          }
+        }
+      },
+    "index": {
+        "mapping": {
+            "total_fields": {
+                "limit": 100000
+            }
+        }
+    },
+    "number_of_replicas": 0,
+    "number_of_shards": 1
+}

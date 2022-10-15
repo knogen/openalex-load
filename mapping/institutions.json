@@ -1,0 +1,45 @@
+{
+    "dynamic": "false",
+    "properties": {
+        "id": {
+            "type": "keyword"
+        },
+        "display_name": {
+            "type" : "keyword",
+            "normalizer": "my_normalizer",
+            "ignore_above": 128
+        },
+        "country_code": {
+            "type": "keyword"
+        },
+        "type": {
+            "type": "keyword"
+        },
+        "works_count": {
+            "type": "integer"
+        },
+        "cited_by_count": {
+            "type": "integer"
+        },
+        "ids": {
+            "dynamic": "false",
+            "properties": {
+                "mag": {
+                    "type": "long"
+                },
+                "openalex": {
+                    "type": "keyword",
+                    "ignore_above": 128
+                },
+                "wikidata": {
+                    "type": "keyword",
+                    "ignore_above": 128
+                },
+                "wikipedia": {
+                    "type": "keyword",
+                    "ignore_above": 128
+                }
+            }
+        }
+    }
+}
