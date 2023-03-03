@@ -1,5 +1,5 @@
 {
-    "dynamic": "false",
+    "dynamic": "true",
     "properties": {
         "id": {
             "type": "keyword"
